@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import os
 import logging
 
-=======
+
 import unittest
->>>>>>> 62a23c3c9c375f9f8ed449ed31e9245b2cd646d4
 import angr
 
 
