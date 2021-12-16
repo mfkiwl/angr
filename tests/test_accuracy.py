@@ -1,8 +1,9 @@
-import nose
-import angr
+import os
 import unittest
 
-import os
+import nose
+import angr
+
 test_location = os.path.join(os.path.dirname(os.path.realpath(str(__file__))), '..', '..', 'binaries', 'tests')
 
 arch_data = { # (steps, [hit addrs], finished)
@@ -15,6 +16,7 @@ arch_data = { # (steps, [hit addrs], finished)
     'armel':   (370, (0x10154b8, 0x1108244, 0x83a8, 0x8348, 0x84b0, 0x84E4, 0x85E8), True),
     'aarch64': (370, (0x1020b04, 0x400430, 0x4003b8, 0x400538, 0x400570, 0x40062C), True),
 }
+
 class TestEmulate(unittest.TestCase):
     def _emulate(self,arch, binary, use_sim_procs, steps, hit_addrs, finished):
         # auto_load_libs can't be disabled as the test takes longer time to execute

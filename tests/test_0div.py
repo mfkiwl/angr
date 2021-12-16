@@ -1,7 +1,8 @@
-import angr
-import nose
 import os
 import unittest
+
+import nose
+import angr
 
 test_location = os.path.join(os.path.dirname(__file__), '..', '..', 'binaries', 'tests')
 
